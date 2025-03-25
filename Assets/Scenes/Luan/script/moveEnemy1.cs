@@ -2,14 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class moveEnemy1 : MonoBehaviour
 {
     public float moveSpeed =1f; // Tốc độ di chuyển của đối tượng
 
     private Transform player; // Tham chiếu đến đối tượng Player
 
+    float inttranform;
+
     void Start()
     {
+        inttranform = Random.Range(0.5f, 1.4f);
+        transform.localScale=new Vector3(inttranform, inttranform, inttranform);
+
         // Tìm đối tượng Player dựa trên tag
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
@@ -33,4 +40,11 @@ public class moveEnemy1 : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag=="Enemy"|| collision.gameObject.tag == "Player")
+        {
+              Destroy(this.gameObject);
+        }
+    }
 }
