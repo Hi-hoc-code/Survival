@@ -5,7 +5,7 @@ using TMPro;
 
 public class Clock : MonoBehaviour
 {
-   float time = 0f;
+   public float time = 0f;
    public TextMeshProUGUI textClock;
  
     // Update is called once per frame

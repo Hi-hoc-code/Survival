@@ -14,7 +14,7 @@ public class moveEnemy1 : MonoBehaviour
 
     void Start()
     {
-        inttranform = Random.Range(0.5f, 1.4f);
+        inttranform = Random.Range(0.1f, 0.5f);
         transform.localScale=new Vector3(inttranform, inttranform, inttranform);
 
         // Tìm đối tượng Player dựa trên tag

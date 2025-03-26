@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public GameObject panelGameover;
+    public Clock clock;
+    float timeover;
     // Start is called before the first frame update
    
 
@@ -12,8 +14,11 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            timeover = clock.time;
+            PlayerPrefs.SetFloat("timeover",timeover);
             Time.timeScale = 0;
             panelGameover.SetActive(true);
+           
         }
     }
 }

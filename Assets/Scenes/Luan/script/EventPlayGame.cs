@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EventMenuMain : MonoBehaviour
+public class EventPlayGame : MonoBehaviour
 {
-    
+
     public void playAgain()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void pause()
     {

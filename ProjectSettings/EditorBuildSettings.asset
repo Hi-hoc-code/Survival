@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Luan/menu.unity
+    guid: e8e417bb015a13d4fa2abdd50e280784
+  - enabled: 1
     path: Assets/Scenes/Luan/Luan.unity
     guid: fa65278b13cce8441840b6ce5e753d93
   m_configObjects: {}
